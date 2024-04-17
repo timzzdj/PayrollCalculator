@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Pie_Chart.png" />
+    <None Remove="Pie_Chart2.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Pie_Chart.png" />
+    <Resource Include="Pie_Chart2.png" />
+  </ItemGroup>
+
+</Project>

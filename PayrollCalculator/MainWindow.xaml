@@ -1,0 +1,53 @@
+﻿<Window x:Class="PayrollCalculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PayrollCalculator"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="#FFEDE691">
+        <Image x:Name="BackgroundImage2" HorizontalAlignment="Left" Height="424" Margin="388,-2,0,0" VerticalAlignment="Top" Width="447" Source="/Pie_Chart2.png"/>
+
+        <Image x:Name="BackgroundImage" HorizontalAlignment="Left" Height="448" Margin="-42,-2,0,0" VerticalAlignment="Top" Width="544" Source="/Pie_Chart.png"/>
+
+        <Grid Margin="400,106,136,48" Background="#FFA4F577">
+            <Label Content="Name:" HorizontalAlignment="Left" Margin="20,34,0,0" VerticalAlignment="Top" Width="56"/>
+            <Label Content="Employee ID:" HorizontalAlignment="Left" Margin="21,61,0,0" VerticalAlignment="Top" Width="80"/>
+            <Label Content="Standard Hours:" HorizontalAlignment="Left" Margin="422,202,0,0" VerticalAlignment="Top" Width="97" Height="24"/>
+            <Label Content="Overtime Hours:" HorizontalAlignment="Left" Margin="458,284,0,0" VerticalAlignment="Top" Width="97" Height="24"/>
+            <Label Content="+" HorizontalAlignment="Left" Margin="17,169,0,0" VerticalAlignment="Top" Width="26"/>
+            <Label Content="=" HorizontalAlignment="Left" Margin="17,205,0,0" VerticalAlignment="Top" Width="26"/>
+            <Label x:Name="emp_overtime" Content="" HorizontalAlignment="Left" Margin="109,119,0,0" VerticalAlignment="Top" Width="72" Height="26" FontFamily="Calibri Light" FontWeight="Bold" Foreground="#FF0800FF"/>
+            <Label x:Name="emp_std" Content="" HorizontalAlignment="Left" Margin="110,98,0,0" VerticalAlignment="Top" Width="73" Height="22" FontFamily="Calibri Light" FontWeight="Bold" Foreground="#FF0800FF"/>
+            <Label x:Name="emp_pRate" Content="" HorizontalAlignment="Left" Margin="72,80,0,0" VerticalAlignment="Top" Width="74" Height="22" FontFamily="Calibri Light" FontWeight="Bold" Foreground="#FF0800FF"/>
+            <Label x:Name="emp_id" Content="" HorizontalAlignment="Left" Margin="91,63,0,0" VerticalAlignment="Top" Width="92" Height="23" FontFamily="Calibri Light" FontWeight="Bold" Foreground="#FF0800FF"/>
+            <Label x:Name="emp_name" Content="" HorizontalAlignment="Left" Margin="60,37,0,0" VerticalAlignment="Top" Width="118" Height="24" FontWeight="Bold" FontFamily="Calibri Light" Foreground="#FF0800FF"/>
+            <Label x:Name="emp_std_result" Content="" HorizontalAlignment="Left" Margin="132,159,0,0" VerticalAlignment="Top" Width="73" Height="22" FontFamily="Calibri Light" FontWeight="Bold" Foreground="#FF0800FF"/>
+            <Label x:Name="emp_overtime_result" Content="" HorizontalAlignment="Left" Margin="132,181,0,0" VerticalAlignment="Top" Width="73" Height="22" FontFamily="Calibri Light" FontWeight="Bold" Foreground="#FF0800FF"/>
+            <Label x:Name="emp_gross_total" Content="" HorizontalAlignment="Left" Margin="162,206,0,0" VerticalAlignment="Top" Width="86" Height="24" FontFamily="Calibri Light" FontWeight="Bold" Foreground="#FF0800FF"/>
+        </Grid>
+        <Button x:Name="Calc_Pay" Content="Calculate" HorizontalAlignment="Left" Margin="94,249,0,0" VerticalAlignment="Top" Height="26" Width="64" Background="#FF37FF00" Click="btn_CalcPay" Foreground="Black" FontWeight="Bold" BorderBrush="Black"/>
+        <Button x:Name="Clear_Form" Content="Clear Form" HorizontalAlignment="Left" Margin="182,249,0,0" VerticalAlignment="Top" Height="26" Width="65" Background="Red" Click="btn_ClearForm" Foreground="Black" FontWeight="Bold" BorderBrush="Black"/>
+        <Label Content="*First Name:" HorizontalAlignment="Left" Margin="33,112,0,0" VerticalAlignment="Top" Width="89" Height="24"/>
+        <Label Content="*Last Name:" HorizontalAlignment="Left" Margin="34,135,0,0" VerticalAlignment="Top" Width="88" Height="24"/>
+        <Label Content="*Employee ID:" HorizontalAlignment="Left" Margin="33,156,0,0" VerticalAlignment="Top" Width="90" Height="24"/>
+        <Label Content="Pay Rate:" HorizontalAlignment="Left" Margin="33,178,0,0" VerticalAlignment="Top" Width="90" Height="24"/>
+        <Label Content="*Hours Worked:" HorizontalAlignment="Left" Margin="33,202,0,0" VerticalAlignment="Top" Width="93" Height="24"/>
+        <TextBox x:Name="hrsWork" HorizontalAlignment="Left" Margin="122,207,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="pRate" HorizontalAlignment="Left" Margin="122,184,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="empID" HorizontalAlignment="Left" Margin="122,161,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="lname" HorizontalAlignment="Left" Margin="122,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="fname" HorizontalAlignment="Left" Margin="122,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Pay Rate:" HorizontalAlignment="Left" Margin="422,184,0,0" VerticalAlignment="Top" Width="90" Height="24"/>
+        <Label Content="Standard Hours:" HorizontalAlignment="Left" Margin="422,202,0,0" VerticalAlignment="Top" Width="97" Height="24"/>
+        <Label Content="Overtime Hours:" HorizontalAlignment="Left" Margin="422,222,0,0" VerticalAlignment="Top" Width="97" Height="24"/>
+        <Label Content="Standard Amount:" HorizontalAlignment="Left" Margin="429,263,0,0" VerticalAlignment="Top" Width="110" Height="24"/>
+        <Label Content="Overtime Amount:" HorizontalAlignment="Left" Margin="429,287,0,0" VerticalAlignment="Top" Width="110" Height="24"/>
+        <Label Content="Total/Gross Pay Amount:" HorizontalAlignment="Left" Margin="429,311,0,0" VerticalAlignment="Top" Width="140" Height="24"/>
+        <Label Content="---------------------------" HorizontalAlignment="Left" Margin="429,299,0,0" VerticalAlignment="Top" Width="140" Height="24"/>
+        <TextBox x:Name="InstructionForm" HorizontalAlignment="Left" Margin="38,35,0,0" TextWrapping="Wrap" Text="Please enter in the following information if applicable: * = required" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged" Background="#FFA49E00" FontWeight="Bold" FontSize="11"/>
+        <TextBox HorizontalAlignment="Left" Margin="286,20,0,0" TextWrapping="Wrap" Text="Employee Payroll Calculator" VerticalAlignment="Top" Width="167" FontWeight="Bold" Background="#FFA49E00"/>
+
+    </Grid>
+</Window>
